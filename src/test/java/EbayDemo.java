@@ -11,14 +11,23 @@ public class EbayDemo {
         String url = ("https://www.ebay.com/");
         //       Thread.sleep(2000);
 
+     // Opens the specified URL in the browser
         driver.get(url);
+
+        // Retrieves the current URL
         String currentUrl = driver.getCurrentUrl();
+
+        // Get the page title
         String currentTitle = driver.getTitle();
+
+        //verification
         if(currentUrl.contains(url) && currentTitle.contains("eBay")){
             System.out.println(currentUrl +" : "+currentTitle);
         }
         System.out.println(currentUrl);
         //       Thread.sleep(2000);
+
+
         driver.findElement(By.xpath("//input[@id=\"gh-ac\"]")).click();
         driver.findElement(By.xpath("//input[@id=\"gh-ac\"]")).clear();
         driver.findElement(By.xpath("//input[@id=\"gh-ac\"]")).sendKeys("Iphone");
