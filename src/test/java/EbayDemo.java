@@ -9,7 +9,10 @@ public class EbayDemo {
         //       Thread.sleep(2000);
         driver.manage().window().maximize();
         //       Thread.sleep(2000);
+
         driver.get("https://www.ebay.com/");
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println(currentUrl);
         //       Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@id=\"gh-ac\"]")).click();
         driver.findElement(By.xpath("//input[@id=\"gh-ac\"]")).clear();
